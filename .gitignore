@@ -1,0 +1,9 @@
+.DS_Store
+dist/
+commonActives/*/node_modules/
+commonActives/node_modules/
+node_modules/
+.vscode
+.ieda
+npm-debug.log
+selenium-debuug.log   
