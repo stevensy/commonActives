@@ -6,4 +6,6 @@ node_modules/
 .vscode
 .ieda
 npm-debug.log
-selenium-debuug.log   
+selenium-debuug.log
+package-lock.json
+*/package-lock.json   
