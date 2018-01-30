@@ -3,9 +3,10 @@
 1. cnpm install 或者npm install 下载依赖
 2. npm run build 开始构建
 3. 参数说明npm run build -- options[moduleName] 构建单个模块
-  `示例构建单个模块  npm run build -- cart
-      构建多个模块   npm run build -- cart,pay
-      构建所有配置模块 npm run build`
+  `示例构建单个模块  npm run build -- cart (sit|pre|prod)
+      构建多个模块   npm run build -- cart,pay (sit|pre|prod)
+      构建所有配置模块 npm run build (sit|pre|prod)`
+(打包的环境可省略，默认sit)
 
 ##  build执行内容
 1.  构建所有配置模块中的内容分别npm install&&npm run build
