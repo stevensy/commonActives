@@ -3,7 +3,6 @@ require('./check-versions')()
 var config = require('../config')
 if (!process.env.NODE_ENV) {
   process.env.NODE_ENV = JSON.parse(config.dev.env.NODE_ENV)
-  
 }
 
 var opn = require('opn')
@@ -36,9 +35,7 @@ var hotMiddleware = require('webpack-hot-middleware')(compiler, {
 })
 // force page reload when html-webpack-plugin template changes
 compiler.plugin('compilation', function (compilation) {
-  console.log('html-webpack-plugin changes')
   compilation.plugin('html-webpack-plugin-after-emit', function (data, cb) {
-    console.log('reload.....')
     hotMiddleware.publish({ action: 'reload' })
     cb()
   })
@@ -81,6 +78,6 @@ module.exports = app.listen(port, function (err) {
 
   // when env is testing, don't need open it
   if (autoOpenBrowser && process.env.NODE_ENV !== 'testing') {
-    opn(uri + '/commonActivesLists/index.html')
+    opn(uri)
   }
 })

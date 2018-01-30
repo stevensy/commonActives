@@ -29,7 +29,7 @@ var copy = function( src, dst ){
                     if(isExlude(path)){
                       return true
                     }
-                    console.log('当前拷贝文件:    ' + path)
+                    //console.log('当前拷贝文件:    ' + path)
                     // 创建读取流
                     readable = fs.createReadStream( _src );
                     // 创建写入流
@@ -80,7 +80,7 @@ var emptyDir = function(fileUrl){
             emptyDir(fileUrl+'/'+file);
         }else{
             fs.unlinkSync(fileUrl+'/'+file);
-            console.log("删除文件"+fileUrl+'/'+file+"成功");
+            //console.log("删除文件"+fileUrl+'/'+file+"成功");
         }
     });
     fs.rmdirSync(fileUrl)
